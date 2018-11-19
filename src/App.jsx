@@ -1,18 +1,11 @@
 import React from 'react';
-import { hashHistory, Router, Route } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-
-// const Dashboard = React.createClass({
-//   render() {
-//     return <div>Welcome to the app!</div>
-//   }
-// });
 
 function AppRouter() {
   return (
-    <Router history={hashHistory}>
+    <Router>
       <Route path="/" component={HomePage}>
-        {/* <IndexRoute component={Dashboard} /> */}
       </Route>
     </Router>
   );
