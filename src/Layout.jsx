@@ -1,28 +1,29 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-// import NavBar from './components/NavBar';
-// import ContentPage from './components/ContentPage';
+import { Layout, Menu } from 'antd';
+import AppRouter from './App';
+import contentFunc from './components/ContentPage';
+import './Layout.less';
 
-const { SubMenu } = Menu;
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Footer } = Layout;
+const Content = contentFunc(AppRouter);
 
 function BlogLayout() {
     return (
         <Layout>
             <Header className="header">
-                <div className="logo" />
+                <div className="logo">BLOG</div>
                 <Menu
                     theme="dark"
                     mode="horizontal"
                     defaultSelectedKeys={['2']}
                     style={{ lineHeight: '64px' }}
                 >
-                    <Menu.Item key="1">nav 1</Menu.Item>
-                    <Menu.Item key="2">nav 2</Menu.Item>
-                    <Menu.Item key="3">nav 3</Menu.Item>
+                    <Menu.Item key="1">首页</Menu.Item>
+                    <Menu.Item key="2">Github</Menu.Item>
                 </Menu>
             </Header>
-            <Content style={{ padding: '0 50px' }}>
+            <Content  />
+            {/* <Content style={{ padding: '0 50px' }}>
                 <Breadcrumb style={{ margin: '16px 0' }}>
                     <Breadcrumb.Item>Home</Breadcrumb.Item>
                     <Breadcrumb.Item>List</Breadcrumb.Item>
@@ -58,11 +59,11 @@ function BlogLayout() {
                     </Sider>
                     <Content style={{ padding: '0 24px', minHeight: 280 }}>
                         Content
-        </Content>
+                    </Content>
                 </Layout>
-            </Content>
+            </Content> */}
             <Footer style={{ textAlign: 'center' }}>
-                Ant Design ©2018 Created by Ant UED
+                Blog ©2018 Created by Alisa@Wei
             </Footer>
         </Layout>
     );
