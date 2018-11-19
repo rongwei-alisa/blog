@@ -53,8 +53,8 @@ const useTypeScript = fs.existsSync(paths.appTsConfig);
 // style files regexes
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
-const sassRegex = /\.(scss|sass)$/;
-const sassModuleRegex = /\.module\.(scss|sass)$/;
+const lessRegex = /\.less$/;
+const lessModuleRegex = /\.module\.less$/;
 
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -368,20 +368,20 @@ module.exports = {
               getLocalIdent: getCSSModuleLocalIdent,
             }),
           },
-          // Opt-in support for SASS. The logic here is somewhat similar
-          // as in the CSS routine, except that "sass-loader" runs first
-          // to compile SASS files into CSS.
-          // By default we support SASS Modules with the
-          // extensions .module.scss or .module.sass
+          // Opt-in support for LESS. The logic here is somewhat similar
+          // as in the CSS routine, except that "less-loader" runs first
+          // to compile LESS files into CSS.
+          // By default we support LESS Modules with the
+          // extensions .module.scss or .module.less
           {
-            test: sassRegex,
-            exclude: sassModuleRegex,
+            test: lessRegex,
+            exclude: lessModuleRegex,
             loader: getStyleLoaders(
               {
                 importLoaders: 2,
                 sourceMap: shouldUseSourceMap,
               },
-              'sass-loader'
+              'less-loader'
             ),
             // Don't consider CSS imports dead code even if the
             // containing package claims to have no side effects.
@@ -389,10 +389,10 @@ module.exports = {
             // See https://github.com/webpack/webpack/issues/6571
             sideEffects: true,
           },
-          // Adds support for CSS Modules, but using SASS
-          // using the extension .module.scss or .module.sass
+          // Adds support for CSS Modules, but using LESS
+          // using the extension .module.scss or .module.less
           {
-            test: sassModuleRegex,
+            test: lessModuleRegex,
             loader: getStyleLoaders(
               {
                 importLoaders: 2,
@@ -400,7 +400,7 @@ module.exports = {
                 modules: true,
                 getLocalIdent: getCSSModuleLocalIdent,
               },
-              'sass-loader'
+              'less-loader'
             ),
           },
           // "file" loader makes sure assets end up in the `build` folder.

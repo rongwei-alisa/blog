@@ -10,7 +10,9 @@ import React, { Component } from 'react';
 class RightBar extends Component {
     render() {
         return (
-            <div className=""></div>
+            <div className="right-bar">
+                <button>登录</button> | <button>注册</button>
+            </div>
         );
     }
 }
