@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout, Breadcrumb } from 'antd';
-import SideBar from './components/SideBar';
+import SideBar from '../../components/SideBar';
 
 const { Content } = Layout;
 
