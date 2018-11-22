@@ -10,7 +10,7 @@ function BlogHeader() {
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={['2']}
+        defaultSelectedKeys={['1']}
         style={{ lineHeight: '64px' }}
       >
         <Menu.Item key="1">首页</Menu.Item>
