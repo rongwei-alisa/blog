@@ -6,6 +6,14 @@
         "libraryName": "antd",
         "style": "css"
       }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ]
+      }
     ]
   ],
   "presets": [

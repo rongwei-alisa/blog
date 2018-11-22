@@ -4,7 +4,7 @@ import Home from './routes/Home';
 
 function AppRouter() {
   return (
-    <Router >
+    <Router>
       <Route path="/" component={Home}></Route>
     </Router>
   );

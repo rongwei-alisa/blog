@@ -1,8 +1,9 @@
 import React from 'react';
+import style from './Home.less';
 
 function Home(params) {
   return (
-    <div>Home</div>
+    <div className="container">Home</div>
   );
 }
 
