@@ -1,3 +1,15 @@
-.container {
-  background: #fff;
+.area {
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.aboutAuthor,
+.newestArticle,
+.classify,
+.archive,
+.hotArticle,
+.comments {
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 10px;
 }

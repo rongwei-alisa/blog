@@ -1,0 +1,35 @@
+@import "../../less/variables.less";
+
+.area {
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.aboutAuthor,
+.newestArticle,
+.classify,
+.archive,
+.hotArticle,
+.comments {
+  // composes: area;
+  .area-style;
+  margin-bottom: 10px;
+}
+
+@container-padding: 20px 15px;
+@area-padding: 5px 10px;
+
+.container {
+  .container-style(@container-padding, 14px);
+
+  .title {
+    padding: @area-padding;
+    background-color: #F5FBFF;
+  }
+
+  .content {
+    padding: @area-padding;
+    background-color: #fff;
+  }
+}

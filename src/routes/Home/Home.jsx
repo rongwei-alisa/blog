@@ -1,9 +1,23 @@
 import React from 'react';
-import style from './Home.less';
+import { Row, Col } from 'antd';
+import styles from './Home.module.less';
 
-function Home(params) {
+const data = [1, 1, 1, 1, 1, 1, 1];
+
+function Home(props) {
+  console.log(props)
   return (
-    <div className="container">Home</div>
+    <div className={styles.container}>
+      <Row gutter={16}>
+        {data.map((d, index) => {
+          return (
+            <Col xs={24} sm={24} md={12} xxl={6} key={index}>
+              <div className={styles.article}>This is an article</div>
+            </Col>
+          );
+        })}
+      </Row>
+    </div>
   );
 }
 

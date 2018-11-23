@@ -1,0 +1,23 @@
+// @background-color: #f4f5f5;
+// @foreground-color: #fff;
+@background-color: #79c3d2;
+@foreground-color: #d9eef2;
+@box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+@color: #143352;
+
+@main-font-size: 14px;
+
+@nav-height: 46px;
+
+.container-style(@padding, @font-size) {
+  padding: @padding;
+  background-color: @foreground-color;
+  color: @color;
+  font-size: @font-size;
+  box-shadow: @box-shadow;
+}
+
+.area-style {
+  background-color: #fff;
+  border: 2px dashed @foreground-color;
+}

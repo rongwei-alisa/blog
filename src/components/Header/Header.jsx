@@ -1,17 +1,17 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
+import styles from './Header.module.less';
 
-const { Header }  = Layout;
+const { Header } = Layout;
 
 function BlogHeader() {
   return (
-    <Header className="header">
-      <div className="logo">BLOG</div>
+    <Header className={styles.header}>
+      <div className={styles.logo}>BLOG</div>
       <Menu
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['1']}
-        style={{ lineHeight: '64px' }}
       >
         <Menu.Item key="1">首页</Menu.Item>
         <Menu.Item key="2">Github</Menu.Item>

@@ -1,0 +1,28 @@
+@import "../../less/variables.less";
+
+.header {
+  height: @nav-height;
+  line-height: @nav-height;
+  background-color: @color;
+
+  .logo {
+    width: 120px;
+    float: left;
+    color: #fff;
+  }
+
+  :global {
+    .ant-menu.ant-menu-root {
+      line-height: @nav-height;
+      background-color: transparent;
+
+      .ant-menu-item {
+        font-weight: bold;
+      }
+
+      .ant-menu-item-selected {
+        background-color: transparent;
+      }
+    }
+  }
+}
