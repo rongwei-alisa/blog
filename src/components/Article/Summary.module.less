@@ -1,0 +1,29 @@
+@import "../../less/variables.less";
+.article {
+  .area-style;
+  
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: lighten(@color, 30%);
+
+    .opt {
+      margin-left: 10px;
+
+      &.liked {
+        .number {
+          color: #eb2f96;
+        }
+      }
+
+      :global(.anticon) {
+        margin-right: 3px;
+      }
+    }
+  }
+}

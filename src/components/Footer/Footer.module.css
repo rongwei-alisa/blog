@@ -1,10 +1,10 @@
 .area-style {
   background-color: #fff;
-  border: 2px dashed #d9eef2;
+  border: 2px dashed #fff;
 }
 .footer {
   padding: 12px;
-  background-color: #143352;
+  background-color: #fff;
   text-align: center;
-  color: #fff;
+  color: #333;
 }

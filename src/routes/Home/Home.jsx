@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+import { ArticleSummary as Card } from 'components/Article';
 import styles from './Home.module.less';
 
 const data = [1, 1, 1, 1, 1, 1, 1];
@@ -12,7 +13,7 @@ function Home(props) {
         {data.map((d, index) => {
           return (
             <Col xs={24} sm={24} md={12} xxl={6} key={index}>
-              <div className={styles.article}>This is an article</div>
+              <Card />
             </Col>
           );
         })}

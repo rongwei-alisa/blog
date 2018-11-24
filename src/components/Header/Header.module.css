@@ -1,12 +1,16 @@
+.area-style {
+  background-color: #fff;
+  border: 2px dashed #fff;
+}
 .header {
   height: 46px;
   line-height: 46px;
-  background-color: #143352;
+  background-color: #fff;
+  color: #333;
 }
 .header .logo {
   width: 120px;
   float: left;
-  color: #fff;
 }
 .header :global .ant-menu.ant-menu-root {
   line-height: 46px;
@@ -14,7 +18,12 @@
 }
 .header :global .ant-menu.ant-menu-root .ant-menu-item {
   font-weight: bold;
+  color: #808080;
+}
+.header :global .ant-menu.ant-menu-root .ant-menu-item:hover {
+  color: #333;
 }
 .header :global .ant-menu.ant-menu-root .ant-menu-item-selected {
   background-color: transparent;
+  color: #333;
 }

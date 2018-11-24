@@ -7,12 +7,6 @@
   padding: 20px 30px;
   background-color: #d9eef2;
   color: #143352;
-  font-size: 18px;
+  font-size: 14px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
-}
-.container .article {
-  background-color: #fff;
-  border: 2px dashed #d9eef2;
-  min-height: 200px;
-  margin-bottom: 20px;
 }

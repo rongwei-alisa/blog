@@ -3,12 +3,12 @@
 .header {
   height: @nav-height;
   line-height: @nav-height;
-  background-color: @color;
+  background-color: @nav-bar-background-color;
+  color: @nav-bar-color;
 
   .logo {
     width: 120px;
     float: left;
-    color: #fff;
   }
 
   :global {
@@ -18,10 +18,16 @@
 
       .ant-menu-item {
         font-weight: bold;
+        color: lighten(@nav-bar-color, 30%);
+
+        &:hover {
+          color: @nav-bar-color;
+        }
       }
 
       .ant-menu-item-selected {
         background-color: transparent;
+        color: @nav-bar-color;
       }
     }
   }
