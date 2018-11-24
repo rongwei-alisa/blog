@@ -5,7 +5,7 @@
 .article {
   background-color: #fff;
   border: 2px dashed #d9eef2;
-  padding: 15px;
+  padding: 15px 15px 5px;
   margin-bottom: 20px;
   cursor: pointer;
 }

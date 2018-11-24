@@ -1,29 +1,38 @@
 .area-style {
   background-color: #fff;
-  border: 2px dashed #fff;
+  border: 2px dashed #d9eef2;
 }
 .header {
+  display: flex;
   height: 46px;
   line-height: 46px;
-  background-color: #fff;
-  color: #333;
+  background-color: #143352;
+  color: #fff;
 }
 .header .logo {
-  width: 120px;
+  margin-right: 20px;
   float: left;
+  text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+  color: white;
+  font-size: 26px;
 }
 .header :global .ant-menu.ant-menu-root {
+  flex-grow: 1;
   line-height: 46px;
   background-color: transparent;
 }
 .header :global .ant-menu.ant-menu-root .ant-menu-item {
   font-weight: bold;
-  color: #808080;
+  color: #ffffff;
 }
 .header :global .ant-menu.ant-menu-root .ant-menu-item:hover {
-  color: #333;
+  color: #fff;
 }
 .header :global .ant-menu.ant-menu-root .ant-menu-item-selected {
   background-color: transparent;
-  color: #333;
+  color: #fff;
+}
+.header :global .ant-avatar {
+  color: #f56a00;
+  background-color: #fde3cf;
 }

@@ -1,18 +1,22 @@
 @import "../../less/variables.less";
-
 .header {
+  display: flex;
   height: @nav-height;
   line-height: @nav-height;
   background-color: @nav-bar-background-color;
   color: @nav-bar-color;
 
   .logo {
-    width: 120px;
+    margin-right: 20px;
     float: left;
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;;
+    color: white;
+    font-size: 26px;
   }
 
   :global {
     .ant-menu.ant-menu-root {
+      flex-grow: 1;
       line-height: @nav-height;
       background-color: transparent;
 
@@ -29,6 +33,14 @@
         background-color: transparent;
         color: @nav-bar-color;
       }
+    }
+
+    .ant-avatar {
+      // color: #143352;
+      // background-color: #d9eef2;
+
+      color: #f56a00; 
+      background-color: #fde3cf;
     }
   }
 }
