@@ -16,6 +16,17 @@
   color: white;
   font-size: 26px;
 }
+.header .rightNav {
+  cursor: pointer;
+}
+.header .rightNav .login:after {
+  content: "\B7";
+  margin: 0 .4rem;
+  font-weight: bold;
+}
+.header .rightNav :global(.ant-divider) {
+  margin: 0 16px;
+}
 .header :global .ant-menu.ant-menu-root {
   flex-grow: 1;
   line-height: 46px;
@@ -23,7 +34,7 @@
 }
 .header :global .ant-menu.ant-menu-root .ant-menu-item {
   font-weight: bold;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
 }
 .header :global .ant-menu.ant-menu-root .ant-menu-item:hover {
   color: #fff;

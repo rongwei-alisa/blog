@@ -14,6 +14,22 @@
     font-size: 26px;
   }
 
+  .rightNav {
+    cursor: pointer;
+
+    .login {
+      &:after {
+        content: "\B7";
+        margin: 0 .4rem;
+        font-weight: bold;
+      }
+    }
+
+    :global(.ant-divider) {
+      margin: 0 16px;
+    }
+  }
+
   :global {
     .ant-menu.ant-menu-root {
       flex-grow: 1;
@@ -22,7 +38,7 @@
 
       .ant-menu-item {
         font-weight: bold;
-        color: lighten(@nav-bar-color, 30%);
+        color: rgba(255, 255, 255, .6);
 
         &:hover {
           color: @nav-bar-color;
