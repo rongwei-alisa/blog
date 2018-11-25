@@ -1,12 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { ArticleSummary as Card } from 'components/Article';
-import styles from './Home.module.less';
+import styles from './Home.less';
 
 const data = [1, 1, 1, 1, 1, 1, 1];
 
 function Home(props) {
-  console.log(props)
   return (
     <div className={styles.container}>
       <Row gutter={16}>

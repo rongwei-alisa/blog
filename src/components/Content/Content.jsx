@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Row, Col } from 'antd';
 import SideBar from 'components/SideBar';
-import styles from './Content.module.less';
+import styles from './Content.less';
 
 const { Content } = Layout;
 

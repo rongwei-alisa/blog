@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { Layout, Menu, Avatar, Badge, Icon, Divider } from 'antd';
-import styles from './Header.module.less';
+import { Layout, Menu, Avatar, Badge, Icon, Divider, Input } from 'antd';
+import styles from './Header.less';
 
 const { Header } = Layout;
+const { Search } = Input;
 
 class BlogHeader extends Component {
   constructor(props) {
@@ -14,6 +15,10 @@ class BlogHeader extends Component {
     this.state = {
       isLogin: false
     };
+  }
+
+  onSearch(value) {
+
   }
 
   onLoginClick() {
@@ -29,7 +34,7 @@ class BlogHeader extends Component {
 
     return (
       <Header className={styles.header}>
-        <div className={styles.logo}>Alisa's Blog</div>
+        <div className={styles.logo}>Alisa 的博客</div>
         <Menu
           theme="dark"
           mode="horizontal"
@@ -39,6 +44,10 @@ class BlogHeader extends Component {
           <Menu.Item key="2">Github</Menu.Item>
         </Menu>
         <div className={styles.rightNav}>
+          <Search
+            placeholder="搜索文章"
+            onSearch={this.onSearch}
+          />
           {isLogin ?
             <Badge dot title="您有新消息啦">
               <Avatar alt="Avatar">Alisa</Avatar>

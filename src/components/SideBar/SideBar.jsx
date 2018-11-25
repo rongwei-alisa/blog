@@ -1,33 +1,44 @@
 import React from 'react';
-import styles from './SideBar.module.less';
+import * as Areas from './Areas';
+import styles from './SideBar.less';
+
+const areas = [{
+  code: 'aboutAuthor',
+  title: '关于博主',
+  content: <Areas.AboutAuthor />
+}, {
+  code: 'newestArticle',
+  title: '最新文章',
+  content: <Areas.NewestArticle />
+}, {
+  code: 'classify',
+  title: '分类',
+  content: <Areas.Classify />
+}, {
+  code: 'archive',
+  title: '归档',
+  content: <Areas.Archive />
+}, {
+  code: 'hotArticle',
+  title: '热门文章',
+  content: <Areas.HotArticle />
+}, {
+  code: 'comments',
+  title: '最新评论',
+  content: <Areas.Comments />
+}];
 
 function SideBar() {
   return (
     <div className={styles.container}>
-      <div className={styles.aboutAuthor}>
-        <h5 className={styles.title}>关于博主</h5>
-        <div className={styles.content}>哈哈哈</div>
-      </div>
-      <div className={styles.newestArticle}>
-        <h5 className={styles.title}>最新文章</h5>
-        <div className={styles.content}>哈哈哈</div>
-      </div>
-      <div className={styles.classify}>
-        <h5 className={styles.title}>分类</h5>
-        <div className={styles.content}>哈哈哈</div>
-      </div>
-      <div className={styles.archive}>
-        <h5 className={styles.title}>归档</h5>
-        <div className={styles.content}>哈哈哈</div>
-      </div>
-      <div className={styles.hotArticle}>
-        <h5 className={styles.title}>热门文章</h5>
-        <div className={styles.content}>哈哈哈</div>
-      </div>
-      <div className={styles.comments}>
-        <h5 className={styles.title}>最新评论</h5>
-        <div className={styles.content}>哈哈哈</div>
-      </div>
+      {areas.map((data) => {
+        return (
+          <div className={styles[data.code]} key={data.code}>
+            <h5 className={styles.title}>{data.title}</h5>
+            <div className={styles.content}>{data.content}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }
