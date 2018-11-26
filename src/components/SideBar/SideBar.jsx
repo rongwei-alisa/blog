@@ -9,7 +9,7 @@ const areas = [{
 }, {
   code: 'newestArticle',
   title: '最新文章',
-  content: <Areas.NewestArticle />
+  content: <Areas.ArticleList />
 }, {
   code: 'classify',
   title: '分类',
@@ -21,7 +21,7 @@ const areas = [{
 }, {
   code: 'hotArticle',
   title: '热门文章',
-  content: <Areas.HotArticle />
+  content: <Areas.ArticleList />
 }, {
   code: 'comments',
   title: '最新评论',

@@ -9,21 +9,21 @@ function AboutAuthor() {
         <Avatar>Alisa</Avatar>
         <div className={styles.desc}>
           <div className={styles.name}>Alisa_Wei</div>
-          <div>good good study, day day up!</div>
+          <div className={styles.signature}>good good study, day day up!</div>
         </div>
-        <div className={styles.achievement}>
-          <div>
-            <span>文章</span>
-            <span>10</span>
-          </div>
-          <div>
-            <span>赞</span>
-            <span>10</span>
-          </div>
-          <div>
-            <span>评论</span>
-            <span>10</span>
-          </div>
+      </div>
+      <div className={styles.achievement}>
+        <div className={styles.column}>
+          <div className={styles.kind}>文章</div>
+          <div className={styles.number}>10</div>
+        </div>
+        <div className={styles.column}>
+          <div className={styles.kind}>赞</div>
+          <div className={styles.number}>10</div>
+        </div>
+        <div className={styles.column}>
+          <div className={styles.kind}>评论</div>
+          <div className={styles.number}>10</div>
         </div>
       </div>
     </div>

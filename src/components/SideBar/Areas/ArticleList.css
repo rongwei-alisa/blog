@@ -1,0 +1,9 @@
+.item {
+  line-height: 30px;
+}
+.item > a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

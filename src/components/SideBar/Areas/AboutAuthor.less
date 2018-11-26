@@ -1,0 +1,42 @@
+@import "~root/less/variables.less";
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  :global(.ant-avatar) {
+    margin-right: 10px;
+  }
+
+  .desc {
+    .name {
+      font-weight: bold;
+    }
+
+    .signature {
+      font-size: 12px;
+    }
+  }
+}
+
+.achievement {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+
+  .column {
+    text-align: center;
+  }
+
+  .kind {
+    font-size: 12px;
+    color: lighten(@color, 20%);
+  }
+
+  .number {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

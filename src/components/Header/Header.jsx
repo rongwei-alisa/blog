@@ -12,7 +12,7 @@ class BlogHeader extends Component {
 
     this.onLoginClick = this.onLoginClick.bind(this);
     this.onSignupClick = this.onSignupClick.bind(this);
-    this.setRef = this.setRef.bind(this);
+    this.setSearchRef = this.setSearchRef.bind(this);
     this.onSearchFocus = this.onSearchFocus.bind(this);
     this.onSearchBlur = this.onSearchBlur.bind(this);
 
@@ -33,7 +33,7 @@ class BlogHeader extends Component {
 
   }
 
-  setRef(ref) {
+  setSearchRef(ref) {
     this.searchRef = ref;
   }
 
@@ -67,7 +67,7 @@ class BlogHeader extends Component {
             onSearch={this.onSearch}
             onFocus={this.onSearchFocus}
             onBlur={this.onSearchBlur}
-            ref={this.setRef}
+            ref={this.setSearchRef}
           />
           {isLogin ?
             <Badge dot title="您有新消息啦">
