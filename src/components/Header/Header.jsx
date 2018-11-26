@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import { Layout, Menu, Avatar, Badge, Icon, Divider, Input } from 'antd';
 import styles from './Header.less';
 
@@ -11,14 +12,13 @@ class BlogHeader extends Component {
 
     this.onLoginClick = this.onLoginClick.bind(this);
     this.onSignupClick = this.onSignupClick.bind(this);
+    this.setRef = this.setRef.bind(this);
+    this.onSearchFocus = this.onSearchFocus.bind(this);
+    this.onSearchBlur = this.onSearchBlur.bind(this);
 
     this.state = {
       isLogin: false
     };
-  }
-
-  onSearch(value) {
-
   }
 
   onLoginClick() {
@@ -27,6 +27,24 @@ class BlogHeader extends Component {
 
   onSignupClick() {
     this.setState({ isLogin: !this.state.isLogin });
+  }
+
+  onSearch(value) {
+
+  }
+
+  setRef(ref) {
+    this.searchRef = ref;
+  }
+
+  onSearchFocus() {
+    const searchNode = ReactDOM.findDOMNode(this.searchRef);
+    searchNode.style.width = '150px';
+  }
+
+  onSearchBlur() {
+    const searchNode = ReactDOM.findDOMNode(this.searchRef);
+    searchNode.style.width = '100px';
   }
 
   render() {
@@ -47,6 +65,9 @@ class BlogHeader extends Component {
           <Search
             placeholder="搜索文章"
             onSearch={this.onSearch}
+            onFocus={this.onSearchFocus}
+            onBlur={this.onSearchBlur}
+            ref={this.setRef}
           />
           {isLogin ?
             <Badge dot title="您有新消息啦">
