@@ -4,7 +4,7 @@ import styles from './AboutAuthor.less';
 
 function AboutAuthor() {
   return (
-    <div className={styles.container}>
+    <div className={styles.aboutAuthor}>
       <div className={styles.author}>
         <Avatar>Alisa</Avatar>
         <div className={styles.desc}>

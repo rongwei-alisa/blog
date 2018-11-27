@@ -17,7 +17,7 @@ const areas = [{
 }, {
   code: 'archive',
   title: '归档',
-  content: <Areas.Archive />
+  content: <Areas.Classify />
 }, {
   code: 'hotArticle',
   title: '热门文章',

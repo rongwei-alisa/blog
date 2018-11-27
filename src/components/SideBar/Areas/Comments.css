@@ -1,0 +1,10 @@
+.comment {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.comment .commentator {
+  font-size: 12px;
+}
+.comment .commentContent:hover {
+  color: #1890ff;
+}
