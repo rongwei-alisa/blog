@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './Detail.less';
 
 class ArticleDetail extends Component {
   constructor(props) {
@@ -8,7 +9,9 @@ class ArticleDetail extends Component {
 
   render() {
     return (
-      <div></div>
+      <div className={styles.container}>
+
+      </div>
     );
   }
 }

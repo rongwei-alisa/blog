@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.less';
 import Layout from './Layout';
+// import Layout from './Text';
 import * as serviceWorker from './serviceWorker';
+import './index.less';
 
 ReactDOM.render(<Layout />, document.getElementById('root'));
 

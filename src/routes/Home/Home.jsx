@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import { ArticleSummary as Card } from 'components/Article';
 import styles from './Home.less';
 
-const data = [1, 1, 1, 1, 1, 1, 1];
+const data = new Array(6);
 
 function Home(props) {
   return (

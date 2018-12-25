@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './routes/Home';
+import { Route, Switch } from 'react-router-dom';
+import Home from 'routes/Home';
+import { ArticleDetail } from 'components/Article';
 
-function AppRouter() {
-  return (
-    <Router>
-      <Route path="/" component={Home}></Route>
-    </Router>
-  );
-}
+const AppRouter = () => (
+  <Switch>
+    <Route path="/" component={Home}></Route>
+    <Route path="/article/?pageId" component={ArticleDetail}></Route>
+  </Switch>
+);
 
 export default AppRouter;

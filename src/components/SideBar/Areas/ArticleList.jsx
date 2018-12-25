@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './ArticleList.less';
 
 const data = [{
@@ -17,10 +18,14 @@ function ArticleList() {
   return (
     <div className={styles.articleList}>
       {data.map((d, index) => {
-        return <div key={index} className={styles.item}><a title={d.name} href={d.href}>{d.name}</a></div>
+        return (
+        <div key={index} className={styles.item}>
+          <Link title={d.name} to={'/article/1'}>{d.name}</Link>
+        </div>
+        )
       })}
     </div>
-  )
+  );
 }
 
 export default ArticleList;

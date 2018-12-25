@@ -19,13 +19,17 @@ class Summary extends Component {
     this.setState({ liked: !this.state.liked });
   }
 
+  viewArticle() {
+    
+  }
+
   render() {
     const { liked } = this.state;
     const likedIconTheme = liked ? 'twoTone' : '';
     const likedColor = '#eb2f96';
     const likedClass = classNames(styles.opt, { [styles.liked]: liked });
     return (
-      <div className={styles.article}>
+      <div className={styles.article} onClick={this.viewArticle}>
         <div className={styles.header}>
           <h3>我是一个标题</h3>
         </div>
