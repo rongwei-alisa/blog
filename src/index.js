@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './Layout';
-// import Layout from './Text';
+// import Layout from './Test';
 import * as serviceWorker from './serviceWorker';
 import './index.less';
 

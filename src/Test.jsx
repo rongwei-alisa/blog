@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 /**
  * const没有变量提升，为何可以在Home定义之前引用它
- * match match.path match.url
+ * match match.path match.url有何不同
  * you should use a <BrowserRouter> if you have a server that responds to requests and a <HashRouter> if you are using a static file server.
  * <Route render={(props) => <About {...props} />} />  props哪里来的
  * server rendering
@@ -22,7 +22,10 @@ const App = () => (
 );
 
 const Home = () => <h2>Home</h2>;
-const About = () => <h2>About</h2>;
+const About = (props) => {
+  console.log(props)
+  return <h2>About</h2>
+};
 const Topic = ({ match }) => <h3>Requested Param: {match.params.id}</h3>;
 const Topics = ({ match }) => (
   <div>

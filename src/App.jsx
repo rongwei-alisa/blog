@@ -7,6 +7,7 @@ const AppRouter = () => (
   <Switch>
     <Route path="/" component={Home}></Route>
     <Route path="/article/?pageId" component={ArticleDetail}></Route>
+    <Route component={Home} />
   </Switch>
 );
 

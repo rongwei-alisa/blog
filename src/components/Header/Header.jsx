@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import modalManager from 'utils/modalManager';
 import { Layout, Menu, Avatar, Badge, Icon, Divider, Input } from 'antd';
+import AuthModal from 'components/Modal/Auth';
 import styles from './Header.less';
 
 const { Header } = Layout;
@@ -22,7 +24,14 @@ class BlogHeader extends Component {
   }
 
   onLoginClick() {
-    this.setState({ isLogin: !this.state.isLogin });
+    modalManager.open({
+      component: AuthModal,
+      componentProps: {
+        title: '登录'
+      }
+    }).then(() => {
+      this.setState({ isLogin: !this.state.isLogin });
+    });
   }
 
   onSignupClick() {
