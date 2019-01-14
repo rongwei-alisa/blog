@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Icon, Button } from 'antd';
+import styles from './SigninForm.less';
 
 const { Item } = Form;
 
@@ -58,10 +59,11 @@ class SigninForm extends Component {
           <Button
             type="primary"
             disabled={hasErrors(getFieldsError())}
+            block
           >
             登录
           </Button>
-          <div>
+          <div className={styles.assistOpt}>
             <span>没有账号？注册</span>
             <span>忘记密码</span>
           </div>

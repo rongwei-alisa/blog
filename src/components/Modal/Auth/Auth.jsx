@@ -10,7 +10,11 @@ class AuthModal extends Component {
 
   render() {
     return (
-      <Modal visible={true} {...this.props}>
+      <Modal
+        visible={true}
+        {...this.props}
+        footer={null}
+      >
         <SigninForm />
       </Modal>
     );
