@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 import modalManager from 'utils/modalManager';
 import { Layout, Menu, Avatar, Badge, Icon, Divider, Input } from 'antd';
 import AuthModal from 'components/Modal/Auth';
@@ -67,8 +68,8 @@ class BlogHeader extends Component {
           mode="horizontal"
           defaultSelectedKeys={['1']}
         >
-          <Menu.Item key="1">首页</Menu.Item>
-          <Menu.Item key="2">Github</Menu.Item>
+          <Menu.Item key="1"><Link to="/">首页</Link></Menu.Item>
+          <Menu.Item key="2"><a href="https://github.com/rongwei-alisa">Github</a></Menu.Item>
         </Menu>
         <div className={styles.rightNav}>
           <Search
@@ -84,7 +85,9 @@ class BlogHeader extends Component {
             </Badge>
             :
             <Fragment>
-              <span className={styles.add}><Icon type="edit" /> 写文章</span>
+              <span className={styles.add} >
+                <Link to="/article/new/edit"><Icon type="edit" /> 写文章</Link>
+              </span>
               <Divider type="vertical" />
               <span className={styles.login} onClick={this.onLoginClick}>登录</span>
               <span className={styles.signup} onClick={this.onSignupClick}>注册</span>
