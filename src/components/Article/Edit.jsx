@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
+import { Input } from 'antd';
+
+const { TextArea } = Input;
 
 class Edit extends Component {
   constructor(props) {
-
+    super(props);
+    this.state = {};
   }
+
   render() {
+    console.log(this.props);
     return (
-      <div></div>
+      <div>
+        shajaskdasd
+        <TextArea />
+      </div>
     );
   }
 }

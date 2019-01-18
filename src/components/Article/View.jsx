@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 class View extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class View extends Component {
 
   render() {
     return (
-      <div></div>
+      <ReactMarkdown source={this.props.value}></ReactMarkdown>
     );
   }
 }
