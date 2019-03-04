@@ -7,9 +7,14 @@ class ArticleDetail extends Component {
   constructor(props) {
     super(props);
     console.log(props);
+    console.log('detail')
     this.state = {
       status: props.status || 'edit'
     };
+  }
+
+  componentDidMount = () => {
+    console.log('detail did mount')
   }
 
   render() {

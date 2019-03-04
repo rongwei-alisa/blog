@@ -5,8 +5,8 @@ import { ArticleDetail } from 'components/Article';
 
 const AppRouter = () => (
   <Switch>
-    <Route path="/" component={Home}></Route>
-    <Route path="/article/pageId/:status?" component={ArticleDetail}></Route>
+    <Route exact path="/" component={Home}></Route>
+    <Route path="/article/:pageId/:status" component={ArticleDetail}></Route>
     <Route component={Home} />
   </Switch>
 );
