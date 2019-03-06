@@ -1,3 +1,5 @@
+## 博客系统，自己写来练手，使用 create-react-app  创建项目
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
