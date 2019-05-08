@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { ArticleSummary as Card } from 'components/Article';
-import styles from './Home.less';
+import styles from './index.less';
 
 const data = [1, 1, 1, 1, 1, 1];
 

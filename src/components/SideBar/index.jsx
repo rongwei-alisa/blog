@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Areas from './Areas';
-import styles from './SideBar.less';
+import styles from './index.less';
 
 const areas = [{
   code: 'aboutAuthor',

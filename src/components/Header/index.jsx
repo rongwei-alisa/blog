@@ -1,30 +1,38 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import modalManager from 'utils/modalManager';
 import { Layout, Menu, Avatar, Badge, Icon, Divider, Input } from 'antd';
-import AuthModal from 'components/Modal/Auth';
-import styles from './Header.less';
+import AuthModal from 'components/AuthModal';
+import styles from './index.less';
 
 const { Header } = Layout;
 const { Search } = Input;
+
+const Logo = () => (<div className={styles.logo}>Alisa 的博客</div>);
+
+const Auth = (props) => (
+  <>
+    <span className={styles.add} >
+      <Link to="/article/new/edit"><Icon type="edit" /> 写文章</Link>
+    </span>
+    <Divider type="vertical" />
+    <span className={styles.login} onClick={props.onLoginClick}>登录</span>
+    <span className={styles.signup} onClick={props.onSignupClick}>注册</span>
+  </>
+);
 
 class BlogHeader extends Component {
   constructor(props) {
     super(props);
 
-    this.onLoginClick = this.onLoginClick.bind(this);
-    this.onSignupClick = this.onSignupClick.bind(this);
-    this.setSearchRef = this.setSearchRef.bind(this);
-    this.onSearchFocus = this.onSearchFocus.bind(this);
-    this.onSearchBlur = this.onSearchBlur.bind(this);
-
     this.state = {
       isLogin: false
     };
+    this.searchRef = React.createRef();
   }
 
-  onLoginClick() {
+  onLoginClick = () => {
     modalManager.open({
       component: AuthModal,
       componentProps: {
@@ -35,7 +43,7 @@ class BlogHeader extends Component {
     });
   }
 
-  onSignupClick() {
+  onSignupClick = () => {
     this.setState({ isLogin: !this.state.isLogin });
   }
 
@@ -43,11 +51,7 @@ class BlogHeader extends Component {
 
   }
 
-  setSearchRef(ref) {
-    this.searchRef = ref;
-  }
-
-  onSearchFocus() {
+  onSearchFocus = () => {
     const searchNode = ReactDOM.findDOMNode(this.searchRef);
     searchNode.style.width = '150px';
   }
@@ -62,7 +66,7 @@ class BlogHeader extends Component {
 
     return (
       <Header className={styles.header}>
-        <div className={styles.logo}>Alisa 的博客</div>
+        <Logo />
         <Menu
           theme="dark"
           mode="horizontal"
@@ -77,21 +81,17 @@ class BlogHeader extends Component {
             onSearch={this.onSearch}
             onFocus={this.onSearchFocus}
             onBlur={this.onSearchBlur}
-            ref={this.setSearchRef}
+            ref={this.searchRef}
           />
           {isLogin ?
             <Badge dot title="您有新消息啦">
               <Avatar alt="Avatar">Alisa</Avatar>
             </Badge>
             :
-            <Fragment>
-              <span className={styles.add} >
-                <Link to="/article/new/edit"><Icon type="edit" /> 写文章</Link>
-              </span>
-              <Divider type="vertical" />
-              <span className={styles.login} onClick={this.onLoginClick}>登录</span>
-              <span className={styles.signup} onClick={this.onSignupClick}>注册</span>
-            </Fragment>
+            <Auth
+              onLoginClick={this.onLoginClick}
+              onSignupClick={this.onSignupClick}
+            />
           }
         </div>
       </Header >

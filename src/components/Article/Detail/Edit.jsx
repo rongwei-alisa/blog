@@ -9,12 +9,18 @@ class Edit extends Component {
     this.state = {};
   }
 
+  handleChange = (e) => {
+    this.props.onChange(e.target.value);
+  };
+
   render() {
-    console.log(this.props);
+    const { value } = this.props;
     return (
       <div>
-        shajaskdasd
-        <TextArea />
+        <TextArea
+          value={value}
+          onChange={this.handleChange}
+        />
       </div>
     );
   }

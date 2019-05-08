@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Icon } from 'antd';
-import styles from './Summary.less';
+import styles from './index.less';
 
 class Summary extends Component {
   constructor(props) {
